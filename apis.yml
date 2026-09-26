@@ -1,23 +1,62 @@
 aid: armada-logistics
+
 name: Armada Logistics
-description: 'Armada Logistics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://armada-logistics.com/wp-content/uploads/2021/12/cropped-logo_armada.png
+
+description: 'PT. Armada Lintas Samudra, operating as Armada Logistics, is a professional freight forwarding and logistics company headquartered in Batam, Indonesia, with branches in Jakarta and Semarang. Founded in 2013, it offers domestic and international transportation services including ocean and air freight, chartering, land trucking, customs clearance, stevedoring, warehousing, and towing, emphasizing professionalism, speed, accuracy, safety, and integrity.'
+
 url: https://raw.githubusercontent.com/api-evangelist/armada-logistics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Logistics
+- Freight
+- Shipping
+- Indonesia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/armada-logistics-llms.txt
+- type: Hosts
+  url: hosts/armada-logistics-hosts.yml
+- type: DomainSecurity
+  url: security/armada-logistics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://armada-logistics.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No API documentation or OpenAPI spec found on api.armada-logistics.com or armada-logistics.com.
+  evidence:
+    - url: https://api.armada-logistics.com/openapi.json
+      status: error
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
